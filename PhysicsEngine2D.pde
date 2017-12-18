@@ -423,11 +423,11 @@ public class Circle extends PhysicsObject {
   float radius;
 
   //needed parameters for a circle velocity are here given a standard velocity of 1.
-  public Circle(float posX, float posY, float radius)
+  public Circle(float posX, float posY, float diameter)
   {
     pos.x = posX;
     pos.y = posY;
-    this.radius = radius/2;
+    this.radius = diameter/2;
     calculateMass();
     velocity.x = 1;
     velocity.y = 1;
