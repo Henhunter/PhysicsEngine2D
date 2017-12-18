@@ -1,6 +1,6 @@
 void draw() {
 }
-//<>// //<>// //<>// //<>//
+//<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>//    
 
 //the core class that takes care of all interactions between PhysicsObjects
 public class PhysicsEngine
@@ -300,6 +300,7 @@ public class PhysicsEngine
   }
 }
 
+//<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>//  
 
 //This class is the groundelement for every object with physics capabilities. Has the needed attributes every object needs and contains the booleans for custom behaviour
 class PhysicsObject {
@@ -374,6 +375,8 @@ class PhysicsObject {
   }
 }
 
+//<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>//  
+
 //this class represents rectangled physicsobjects, can be used on its own but also with an extension to give custom classes a rigidbody.
 public class Rect extends PhysicsObject {
   float w;
@@ -415,6 +418,8 @@ public class Rect extends PhysicsObject {
     rect(pos.x, pos.y, w, h);
   }
 }
+
+//<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>//  
 
 //this class represents circle physicsobjects, can be used on its own but also with an extension to give custom classes a rigidbody.
 public class Circle extends PhysicsObject {
