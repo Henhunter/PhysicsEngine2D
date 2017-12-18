@@ -1,11 +1,8 @@
-void draw() {
-}
 //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>//    
 
 //the core class that takes care of all interactions between PhysicsObjects
 public class PhysicsEngine
-{
-  boolean collision;
+{  
   ArrayList<PhysicsObject> objectArray = new ArrayList<PhysicsObject>();
 
   //Checks borderCollisions for our objects
@@ -73,7 +70,7 @@ public class PhysicsEngine
   }
 
   //returns a boolean depending on if the two PhysicsObjects hits eachother, uses different methods depending on if it's rect or circle
-  boolean collisionDetection(PhysicsObject first, PhysicsObject second)
+  public boolean collisionDetection(PhysicsObject first, PhysicsObject second)
   {
     if (first instanceof Circle && second instanceof Circle)
     {
@@ -424,7 +421,6 @@ public class Rect extends PhysicsObject {
 //this class represents circle physicsobjects, can be used on its own but also with an extension to give custom classes a rigidbody.
 public class Circle extends PhysicsObject {
   float radius;
-  boolean player;
 
   //needed parameters for a circle velocity are here given a standard velocity of 1.
   public Circle(float posX, float posY, float radius)
@@ -441,7 +437,6 @@ public class Circle extends PhysicsObject {
   //needed parameters for a circle.
   public Circle(float posX, float posY, float diameter, float xVelocity, float yVelocity)
   {
-    if (posX == mouseX) player=true;
     pos.x = posX;
     pos.y= posY;
     this.radius = diameter/2;
